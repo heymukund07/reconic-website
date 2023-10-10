@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@300&family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary-color: #070729;
+  --secondary-color: #ffd943;
+  --transition-time: all 0.3s ease;
+  --box-shadow1: 10px 10px 0 white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(rgb(21, 134, 171), rgb(9, 9, 54));
+  font-family: "Montserrat", sans-serif;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.cross-icon {
+  display: none;
+}
+/* ************************** SCROLL BAR ***************************** */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 183, 244);
+  border-radius: 10px;
+}
+
+/* ******************************* HEADER  STARTS **************************** */
+header {
+  display: flex;
+  position: fixed;
+  height: 80px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 7px 10px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  z-index: 5;
+  transition: var(--transition-time);
+}
+.logo {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+header.navbar {
+  box-shadow: 0 0 200px black;
+  background: var(--secondary-color);
+}
+
+header.navbar .logo,
+header.navbar ul a {
+  transition: var(--transition-time);
+  color: var(--primary-color);
+}
+header.navbar a:hover {
+  color: white;
+  background: var(--primary-color);
+  box-shadow: var(--box-shadow1);
+}
+header.navbar .logo:hover {
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+header .logo {
+  margin-left: 20px;
+  color: white;
+  position: relative;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+header .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  margin: 10px;
+}
+
+header ul li a {
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-weight: 550;
+  border-radius: 5px;
+  transition: var(--transition-time);
+}
+
+header ul li a:hover {
+  color: white;
+  background: var(--secondary-colory-color);
+  box-shadow: var(--box-shadow1);
+}
+/* ******************************* HEADER  ENDS **************************** */
+
+/* *********************** ENTRY PAGE ************************ */
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .background {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .background .content {
+  width: 50%;
+  height: 100%;
+}
+
+.banner .background .content h2 {
+  font-size: 4em;
+  color: white;
+}
+
+.banner .background .content a {
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  margin: 30px 0;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: var(--transition-time);
+}
+
+.banner .background .content a:hover {
+  color: white;
+  border: 2px solid transparent;
+  background: var(--secondary-colory-color);
+  box-shadow: var(--box-shadow1);
+}
+.banner .background .content p {
+  margin-top: 20px;
+  color: white;
+}
+/* ******************************* ENTRY PAGE ENDS **************************** */
+
+/* ************************ ABOUT ********************** */
+.about {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .content-box {
+  width: 50%;
+  margin: 20px;
+}
+
+.about .content-box h2 {
+  color: white;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.about .content-box p {
+  color: white;
+  max-width: 600px;
+  text-align: justify;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+.about .content-box a {
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  margin: 30px 0;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: var(--transition-time);
+}
+
+.about .content-box a:hover {
+  border: 2px solid transparent;
+  color: white;
+  background: var(--secondary-colory-color);
+  box-shadow: var(--box-shadow1);
+}
+
+/* ******************************* ABOUT ENDS **************************** */
+
+/* ******************************* TOURNAMENTS STARS **************************** */
+
+.tournaments {
+  padding: 0px 80px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tournaments h2 {
+  color: white;
+  margin: 10px 0;
+}
+
+.tournaments .box-box {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.tournaments .box-box .box {
+  width: 350px;
+  border-radius: 10px;
+  margin: 20px 40px;
+  background: #1b2141;
+  overflow: hidden;
+}
+
+.tournaments .box-box .box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tournaments .box-box .box .content {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.tournaments .box-box .box p {
+  margin-top: 10px;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.75);
+}
+.tournaments .box-box .box h4 {
+  font-size: 1.2em;
+  font-weight: 650;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.tournaments .box-box .box a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  border: 2px solid white;
+  transition: var(--transition-time);
+}
+
+.tournaments .box-box .box a:hover {
+  color: white;
+  border: 2px solid transparent;
+  background: var(--secondary-colory-color);
+  box-shadow: 2px 2px 0 white;
+}
+.tournaments .box-box .box {
+  transition: var(--transition-time);
+}
+
+.tournaments .box-box .box:hover {
+  box-shadow: 3px 3px 6px var(--secondary-color);
+}
+
+/* ******************************* TOURNAMENTS ENDS **************************** */
+
+/* ******************************* CONTACT STARS **************************** */
+
+.contact {
+  padding: 20px 100px;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.contact img {
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.contact .contact-form {
+  width: 50%;
+  margin: 30px;
+}
+
+.contact .contact-form h1,
+.contact .contact-form p {
+  color: rgba(255, 255, 255, 0.85);
+}
+.contact .contact-form h1 {
+  margin-bottom: 50px;
+}
+
+.contact .contact-form p {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.contact .contact-form .input {
+  margin: 10px 0;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: white;
+  width: 100%;
+  min-height: 15px;
+  background: #1b2141;
+  font-size: 1em;
+}
+
+.contact .contact-form .submit-button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 15%;
+  color: white;
+  background: var(--primary-color);
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid white;
+  margin: 30px 0;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: var(--transition-time);
+}
+
+.contact .contact-form .submit-button:hover {
+  cursor: pointer;
+  border: 2px solid transparent;
+  color: white;
+  background: var(--secondary-colory-color);
+  box-shadow: var(--box-shadow1);
+}
+
+/* ******************************* CONTACT ENDS **************************** */
+
+/* ******************************* FOOTER STARTS **************************** */
+.footer {
+  color: white;
+  margin-top: 100px;
+  padding: 10px 200px;
+}
+
+.footer .information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .information ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .information .logo {
+  font-size: 2em;
+  color: white;
+  font-weight: 600;
+}
+.footer .information p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .information p i {
+  margin-right: 10px;
+}
+
+.footer .information p .fa-linkedin {
+  margin-left: 5px;
+  color: rgba(255, 255, 255, 0.85);
+  transition: var(--transition-time);
+}
+.footer .information p .fa-linkedin:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.footer .information ul li {
+  margin: 0 20px;
+  font-size: 1.8em;
+  height: 50px;
+  width: 50px;
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-time);
+}
+.footer .information ul li i {
+  color: rgba(255, 255, 255, 0.85);
+  transition: var(--transition-time);
+}
+
+.footer .information ul li:hover,
+.footer .information ul li:hover i {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* ********************** FOOTER ENDS *********************** */
+
+/* ********************** RESPONSIVE ********************** */
+
+@media (max-width: 991px) {
+  header {
+    padding: 15px 100px;
+  }
+  header .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1b2141;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+    display: none;
+  }
+
+  header .nav-links li {
+    margin: 25px 0;
+  }
+
+  header .nav-links li a {
+    font-size: 25px;
+    margin: 20px 0;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .cross-icon {
+    display: flex;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+  }
+
+  .banner .background img {
+    position: absolute;
+  }
+
+  .banner .background .content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 79, 119, 0.3);
+    z-index: 1;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .about {
+    flex-direction: column;
+    width: 100%;
+  }
+  .about .content {
+    width: 100%;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+  .contact .contact-form,
+  .contact img {
+    width: 100%;
+  }
+
+  .contact .contact-form .submit-button {
+    width: 100%;
+  }
+
+  .footer .information {
+    flex-direction: column;
+  }
+  .footer .information ul li {
+    margin-top: 10px;
+  }
+}

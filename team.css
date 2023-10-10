@@ -1,0 +1,123 @@
+:root {
+  --color-primary: #011729;
+  --color-success: #00bf8e;
+  --color-warning: red;
+  --color-danger: rgba(1, 10, 57, 0.7);
+  --color-danger-variant: rgba(247, 88, 66, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(6, 57, 85, 1);
+  --color-bg: #2e5984;
+  --color-bg1: #007c8f;
+  --color-bg2: #00203152;
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+  --container-width-sm: 94%;
+
+  --transition: all 400ms ease;
+}
+
+/* ============== TEAM ============= */
+.team {
+  margin-top: 10rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.meet {
+  margin: 0rem auto 4rem auto;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.team-member {
+  background: var(--color-bg2);
+  padding: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+}
+
+.team-member-image img {
+  width: 200px;
+}
+.team-member-image img {
+  filter: saturate(0);
+}
+
+.team-member:hover img {
+  filter: saturate(1);
+}
+
+.team-member-info * {
+  text-align: center;
+  margin-top: 1.4rem;
+}
+
+.team-member-info p {
+  color: var(--color-light);
+}
+
+.team-member-socials {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-primary);
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.team-member:hover .team-member-socials {
+  right: 0;
+}
+
+.team-member-socials a {
+  padding: 1rem;
+  transition: var(--transition);
+}
+
+.team-member-socials a:hover {
+  background: var(--color-bg2);
+}
+/* ==================== MEDIA QUERIES (TABLETS) ================= */
+@media screen and (max-width: 1024px) {
+  .team-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .team-member {
+    padding: 1rem;
+  }
+}
+
+/* ==================== MEDIA QUERIES (PHONES) ================= */
+@media screen and (max-width: 600px) {
+  .team-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+
+  .team-member {
+    padding: 0;
+  }
+
+  .team-member p {
+    margin-bottom: 1.5rem;
+  }
+}
